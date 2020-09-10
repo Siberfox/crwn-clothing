@@ -16,5 +16,5 @@ deploy:
   cleanup: true
   token: $GITHUB_TOKEN
   local_dir: build
-  edge:
+  on:
     branch: master
