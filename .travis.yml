@@ -12,7 +12,7 @@ script:
   - npm run build
 
 deploy:
-  provider: pages:git
+  provider: pages
   cleanup: true
   token: $GITHUB_TOKEN
   local_dir: build
