@@ -10,11 +10,4 @@ install:
 
 script:
   - npm run build
-
-deploy:
-  provider: pages
-  cleanup: true
-  token: $GITHUB_TOKEN
-  local_dir: build
-  on:
-    branch: master
+  - npm run deploy
