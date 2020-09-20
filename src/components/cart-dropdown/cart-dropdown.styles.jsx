@@ -19,6 +19,8 @@ export const CartDropdownButton = styled(CustomButton)`
   margin-top: auto;
 `;
 
+CartDropdownButton.displayName = "CartDropdownButton";
+
 export const CartItemsContainer = styled.div`
   height: 240px;
   display: flex;
@@ -30,3 +32,5 @@ export const EmptyMessageContainer = styled.span`
   font-size: 18px;
   margin: 18px auto;
 `;
+
+EmptyMessageContainer.displayName = "EmptyMessageContainer";
