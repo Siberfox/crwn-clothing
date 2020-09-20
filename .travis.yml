@@ -6,13 +6,13 @@ cache: npm
 install:
   - npm ci
 
-script:
-  - npm run build
 
 jobs:
   include:
     - stage: Tests
       scripts: npm run test
+    - stage: Build
+      scripts: npm run build
     - stage: Deploy
       scripts: skip
         deploy:
