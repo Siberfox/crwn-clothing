@@ -6,20 +6,15 @@ cache: npm
 install:
   - npm ci
 
+script:
+  - npm run test
+  - npm run build
 
-jobs:
-  include:
-    - stage: Tests
-      scripts: npm run test
-    - stage: Build
-      scripts: npm run build
-    - stage: Deploy
-      scripts: skip
-        deploy:
-          provider: pages
-          skip_cleanup: true
-          keep-history: true
-          github_token: $GITHUB_TOKEN
-          local_dir: build
-          on:
-            branch: master
+deploy:
+  provider: pages
+  skip_cleanup: true
+  keep-history: true
+  github_token: $GITHUB_TOKEN
+  local_dir: build
+  on:
+    branch: master
