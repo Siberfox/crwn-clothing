@@ -7,7 +7,6 @@ install:
   - npm ci
 
 
-
 jobs:
   include:
     - stage: Tests
