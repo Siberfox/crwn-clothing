@@ -21,7 +21,7 @@ const mockUser = {
 const mockError = "error";
 
 describe("setCurrentUser action", () => {
-  test("should create setCurrentUser action", () => {
+  it("should create setCurrentUser action", () => {
     const action = setCurrentUser(mockUser);
     expect(action.type).toEqual(UserActionTypes.SET_CURRENT_USER);
     expect(action.payload).toEqual(mockUser);
@@ -46,7 +46,7 @@ describe("emailSignInStart action", () => {
 });
 
 describe("signInSuccess action", () => {
-  test("should create signInSuccess action", () => {
+  it("should create signInSuccess action", () => {
     const action = signInSuccess(mockUser);
     expect(action.type).toEqual(UserActionTypes.SIGN_IN_SUCCESS);
     expect(action.payload).toEqual(mockUser);
@@ -88,7 +88,7 @@ describe("signOutFailure action", () => {
 });
 
 describe("signUpStart action", () => {
-  test("should create signUpStart action", () => {
+  it("should create signUpStart action", () => {
     const action = signUpStart(mockUser);
     expect(action.type).toEqual(UserActionTypes.SIGN_UP_START);
     expect(action.payload).toEqual(mockUser);
@@ -96,7 +96,7 @@ describe("signUpStart action", () => {
 });
 
 describe("signUpSuccess action", () => {
-  test("should create signUpSuccess action", () => {
+  it("should create signUpSuccess action", () => {
     const mockUserData = { user: mockUser, additionalData: "data" };
     const action = signUpSuccess(mockUserData);
     expect(action.type).toEqual(UserActionTypes.SIGN_UP_SUCCESS);

@@ -1,5 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
+import { shallowToJson } from "enzyme-to-json";
 
 import { CheckoutItem } from "./checkout-item.component";
 
@@ -30,7 +31,7 @@ describe("CheckoutItem component", () => {
   });
 
   it("should render CheckoutItem component", () => {
-    expect(wrapper).toMatchSnapshot();
+    expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
 
   it("should call clearItem when remove button is clicked", () => {

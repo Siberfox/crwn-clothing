@@ -1,5 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
+import { shallowToJson } from "enzyme-to-json";
 
 import { Header } from "./header.component";
 import CartDropdownContainer from "../cart-dropdown/cart-dropdown.container";
@@ -23,7 +24,7 @@ describe("Header component", () => {
   });
 
   it("should render Header component", () => {
-    expect(wrapper).toMatchSnapshot();
+    expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
 
   describe("if currentUser is present", () => {

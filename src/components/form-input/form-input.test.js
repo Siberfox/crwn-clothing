@@ -1,5 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
+import { shallowToJson } from "enzyme-to-json";
 
 import FormInput from "./form-input.component";
 
@@ -20,7 +21,7 @@ describe("FormInput component", () => {
   });
 
   it("should render FormInput component", () => {
-    expect(wrapper).toMatchSnapshot();
+    expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
 
   it("should call handleChange method when input changes", () => {

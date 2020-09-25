@@ -3,6 +3,7 @@ import { mount } from "enzyme";
 import { combineReducers, createStore } from "redux";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
+import { shallowToJson } from "enzyme-to-json";
 
 import { ShopPage } from "./shop.component";
 
@@ -61,7 +62,7 @@ describe("ShopPage", () => {
   });
 
   it("should render ShopPage component", () => {
-    expect(wrapper).toMatchSnapshot();
+    expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
 
   it("should render ShopPage component", () => {

@@ -1,5 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
+import { shallowToJson } from "enzyme-to-json";
 
 import { MenuItem } from "./menu-item.component";
 
@@ -33,7 +34,7 @@ describe("MenuItem component", () => {
   });
 
   it("should render MenuItem component", () => {
-    expect(wrapper).toMatchSnapshot();
+    expect(shallowToJson(wrapper)).toMatchSnapshot();
   });
 
   it("should call history.push with the right string when MenuItemContainer clicked", () => {

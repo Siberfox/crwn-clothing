@@ -1,7 +1,9 @@
 import React from "react";
 import { shallow } from "enzyme";
 import { App } from "./App";
+import { shallowToJson } from "enzyme-to-json";
 
 it("Should render App component", () => {
-  expect(shallow(<App />)).toMatchSnapshot();
+  const wrapper = shallow(<App />);
+  expect(shallowToJson(wrapper)).toMatchSnapshot();
 });

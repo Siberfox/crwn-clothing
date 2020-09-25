@@ -1,3 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render StripeCheckoutButton component 1`] = `ShallowWrapper {}`;
+exports[`should render StripeCheckoutButton component 1`] = `
+<ReactStripeCheckout
+  ComponentClass="span"
+  amount={NaN}
+  billingAddress={true}
+  className="StripeCheckout"
+  description="Your total is $undefined"
+  image="https://svgshare.com/i/CUz.svg"
+  label="Pay Now"
+  locale="auto"
+  name="CRWN Clothing Ltd"
+  panelLabel="Pay Now"
+  reconfigureOnUpdate={false}
+  shippingAddress={true}
+  stripeKey="pk_test_51HEylSJwtLW4Y2M2eqnNZ6IzA0CjObC8HeVyAdKWIGi2QeyuufhcbAAhXJ4Ljf72Ssa5uVS4XtOptSoEkyKboNUs00f3iNjPAL"
+  token={[Function]}
+  triggerEvent="onClick"
+/>
+`;

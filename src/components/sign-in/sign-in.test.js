@@ -1,7 +1,10 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { signIn } from "./sign-in.component";
+import { shallowToJson } from "enzyme-to-json";
+
+import { SignIn } from "./sign-in.component";
 
 it("should render SignInAndSignUpPage component", () => {
-  expect(shallow(<signIn />)).toMatchSnapshot();
+  const wrapper = shallow(<SignIn />);
+  expect(shallowToJson(wrapper)).toMatchSnapshot();
 });

@@ -1,6 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import { CheckoutPage } from "./checkout.component";
+import { shallowToJson } from "enzyme-to-json";
 
 let wrapper;
 beforeEach(() => {
@@ -13,5 +14,5 @@ beforeEach(() => {
 });
 
 it("should render CheckoutPage component", () => {
-  expect(wrapper).toMatchSnapshot();
+  expect(shallowToJson(wrapper)).toMatchSnapshot();
 });

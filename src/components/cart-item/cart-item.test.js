@@ -1,5 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
+import { shallowToJson } from "enzyme-to-json";
+
 import CartItem from "./cart-item.component";
 
 it("should render CartItem component", () => {
@@ -10,5 +12,7 @@ it("should render CartItem component", () => {
     quantity: 2,
   };
 
-  expect(shallow(<CartItem item={mockItem} />)).toMatchSnapshot();
+  const wrapper = shallow(<CartItem item={mockItem} />);
+
+  expect(shallowToJson(wrapper)).toMatchSnapshot();
 });

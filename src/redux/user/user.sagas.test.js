@@ -168,7 +168,7 @@ describe("is user authenticated saga", () => {
   });
 });
 
-describe("get snapshot from userAuth", () => {
+it("get snapshot from userAuth", () => {
   const mockUserAuth = {};
   const mockAdditionalData = {};
   const generator = getSnapshotFromUserAuth(mockUserAuth, mockAdditionalData);
