@@ -1,3 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render CollectionsOverview component 1`] = `<styled.div />`;
+exports[`should render CollectionsOverview component 1`] = `
+<styled.div>
+  <withRouter(CollectionPreview)
+    key="idkfa"
+  />
+  <withRouter(CollectionPreview)
+    key="iddqd"
+  />
+</styled.div>
+`;

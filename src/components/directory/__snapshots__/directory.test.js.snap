@@ -1,3 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render Directory component 1`] = `<styled.div />`;
+exports[`should render Directory component 1`] = `
+<styled.div>
+  <withRouter(MenuItem)
+    key="idkfa"
+  />
+  <withRouter(MenuItem)
+    key="iddqd"
+  />
+</styled.div>
+`;

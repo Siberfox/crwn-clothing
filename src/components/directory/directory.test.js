@@ -5,6 +5,7 @@ import { shallowToJson } from "enzyme-to-json";
 import { Directory } from "./directory.component";
 
 it("should render Directory component", () => {
-  const wrapper = shallow(<Directory sections={[]} />);
+  const mockSections = [{ id: "idkfa" }, { id: "iddqd" }];
+  const wrapper = shallow(<Directory sections={mockSections} />);
   expect(shallowToJson(wrapper)).toMatchSnapshot();
 });
