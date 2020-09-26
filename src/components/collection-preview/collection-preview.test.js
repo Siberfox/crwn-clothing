@@ -1,6 +1,5 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { shallowToJson } from "enzyme-to-json";
 
 import { CollectionPreview } from "./collection-preview.component";
 
@@ -31,7 +30,7 @@ describe("CollectionPreview component", () => {
   });
 
   it("should render CollectionPreview component", () => {
-    expect(shallowToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it("should call history.push with the right string when TitleContainer clicked", () => {

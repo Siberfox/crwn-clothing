@@ -1,6 +1,5 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { shallowToJson } from "enzyme-to-json";
 
 import { CartDropdown } from "./cart-dropdown.component";
 import CartItem from "../cart-item/cart-item.component";
@@ -30,7 +29,7 @@ describe("CartDropdown component", () => {
   });
 
   it("should render CartDropdown component", () => {
-    expect(shallowToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it("should call history.push when button is clicked", () => {

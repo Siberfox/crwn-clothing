@@ -1,6 +1,5 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { shallowToJson } from "enzyme-to-json";
 
 import { CollectionItem } from "./collection-item.component";
 
@@ -27,7 +26,7 @@ describe("CollectionItem component", () => {
   });
 
   it("should render CollectionItem component", () => {
-    expect(shallowToJson(wrapper)).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
   it("should call addItem when AddButton clicked", () => {
