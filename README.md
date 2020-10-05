@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Siberfox/crwn-clothing.svg?branch=master)](https://travis-ci.org/Siberfox/crwn-clothing)
+
 ## CRWN Clothing 🎯
 
 Clothing shop made using React & firebase with Stripe payments implemented.
